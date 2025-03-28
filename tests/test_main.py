@@ -1,10 +1,9 @@
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))  # Додано коректний шлях до main.py
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))  # Додано шлях до кореневої директорії
 
 import pytest
-from main import get_top_words
-
+from main import get_top_words  # Імпортуємо функцію з main.py
 
 @pytest.fixture
 def sample_text_file(tmp_path):
