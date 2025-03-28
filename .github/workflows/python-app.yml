@@ -26,7 +26,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV  # Вказуємо шлях до кореневої директорії як PYTHONPATH
+
       - name: Run tests
         run: |
-          export PYTHONPATH=$(pwd)  # Вказуємо поточну директорію як шлях до модулів
-          pytest --html=report.html  # Запускаємо тести
+          pytest --html=report.html  # Запуск тестів
