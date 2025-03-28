@@ -1,6 +1,9 @@
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))  # Додано шлях до кореневої директорії
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))  # Це додає кореневу директорію
+
+import pytest
+from main import get_top_words  # Імпортуємо функцію з main.py
 
 import pytest
 from main import get_top_words  # Імпортуємо функцію з main.py
